@@ -1,0 +1,47 @@
+<!DOCTYPE HTML>
+<html lang= "en-us">
+<head>
+<meta charset="utf-8">
+<title> loops </title>
+<script type= "text/javaScript">
+/*Input: user will click on button to see multiples 1-12.
+  Processing: The program loops and multiplies 1-12.
+  Output: The program will display the total multiples 1-12.
+*/
+
+function timesTable(){
+//program establishes text variable and base number to multiply
+//program calculates and loops to 12
+var text= "";
+for (var i=1; i<=12; i++){
+	for (var j=1; j<=12; j++){
+text += j + " x " + i + " = " + j*i + "<br>";
+
+//program displays total multiples 1 through 12
+document.getElementById('timesTableDiv').innerHTML=text;
+}
+}
+}
+function array(){
+var text= "";
+var num= [12];
+for (var a = 1; a <= num ; a++){
+	for (var b = 1; b <= num; b++){
+text += a + " x " + b + " = " + a*b + "<br>";
+
+//program displays total multiples 1 through 12
+document.getElementById('arrayDiv').innerHTML=text;
+}
+}
+}
+</script>
+</head>
+<body>
+<button type= "button" onclick="timesTable()"> See mulitples loop</button><br>
+<div id="timesTableDiv"></div><br>
+<button type= "button" onclick="array()"> See mulitples array</button><br>
+<div id="arrayDiv"></div>
+
+</body>
+</html>
+
