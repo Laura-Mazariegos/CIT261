@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+
+<body>
+<h1> Animals </h1>
+	<h2>(JavaScript Objects in Action)</h2><br><br>
+	<div id="animalOneDiv"></div><br><br>
+	<div id="animalTwoDiv"></div><br><br>
+	<div id="animalThreeDiv"></div><br>
+	<h3> Which one would you like to take home?</h3>
+	<head>
+		<meta charset="utf-8">
+		<title> JavaScript Objects </title>
+		<script type="text/javaScript">
+
+			function animal(species, color, weight, danger, name){
+				this.species = species;
+				this.color = color;
+				this.weight = weight;
+				this.danger = danger;
+				this.name = name;
+
+				this.statement = function(){
+					return " You have a " + this.species+ " standing in front of you. It weighs " + this.weight+ "lbs. and is named " + this.name +". On a danger scale of 1 - 10, it ranks a " + this.danger+". Don't let the " + this.color+ " color fool you."}
+				 }
+
+			var tiger = new animal('Tiger', 'White', 300, 10, 'Snow Flake');
+			var turtle = new animal('Turtle', 'Green', 5, 1, 'Speed Racer');
+			var dog = new animal('Dog', 'Black and Brown', 75, 5, 'Lady Bug');
+			document.getElementById('animalOneDiv').innerHTML=tiger.statement(); document.getElementById('animalTwoDiv').innerHTML=turtle.statement();			document.getElementById('animalThreeDiv').innerHTML=dog.statement();
+
+		</script>
+	</head>
+</body>
+
+</html>
