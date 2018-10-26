@@ -7,7 +7,26 @@
 	<div id="animalOneDiv"></div><br><br>
 	<div id="animalTwoDiv"></div><br><br>
 	<div id="animalThreeDiv"></div><br>
-	<h3> Which one would you like to take home?</h3>
+	<h3> Which one would you like to take home?</h3><br>
+	<h3>Here is my code for how I used the objects</h3>
+	<p>function animal(species, color, weight, danger, name){ <br>
+		this.species = species; <br>
+		this.color = color;<br>
+		this.weight = weight;<br>
+		this.danger = danger;<br>
+		this.name = name;<br>
+		<br>
+		this.statement = function(){<br>
+		return " You have a " + this.species+ " standing in front of you. It weighs " + <br>this.weight+ "lbs. and is named " + this.name +". On a danger scale of 1 - 10, it <br>ranks a " + this.danger+". Don't let the " + this.color+ " color fool you."}<br>
+		}<br>
+		<br>
+		var tiger = new animal('Tiger', 'White', 300, 10, 'Snow Flake');<br>
+		var turtle = new animal('Turtle', 'Green', 5, 1, 'Speed Racer');<br>
+		var dog = new animal('Dog', 'Black and Brown', 75, 5, 'Lady Bug');<br><br>
+		document.getElementById('animalOneDiv').innerHTML=tiger.statement();<br>
+		document.getElementById('animalTwoDiv').innerHTML=turtle.statement();<br>
+		document.getElementById('animalThreeDiv').innerHTML=dog.statement();<br>
+	</p>
 	<head>
 		<meta charset="utf-8">
 		<title> JavaScript Objects </title>

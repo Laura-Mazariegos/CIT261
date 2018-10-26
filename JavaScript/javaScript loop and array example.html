@@ -3,6 +3,7 @@
 <head>
 <meta charset="utf-8">
 <title> loops </title>
+	<h1>Click the Buttons Below to See A Loop and an Array in Action</h1>
 <script type= "text/javaScript">
 /*Input: user will click on button to see multiples 1-12.
   Processing: The program loops and multiplies 1-12.
@@ -37,11 +38,37 @@ document.getElementById('arrayDiv').innerHTML=text;
 </script>
 </head>
 <body>
-<button type= "button" onclick="timesTable()"> See mulitples loop</button><br>
-<div id="timesTableDiv"></div><br>
-<button type= "button" onclick="array()"> See mulitples array</button><br>
-<div id="arrayDiv"></div>
 
+	<button type= "button" onclick="timesTable()"> See mulitples loop</button><br>
+	<div  id="timesTableDiv"></div><br>
+	<button type= "button" onclick="array()"> See mulitples array</button><br>
+<div  id="arrayDiv"></div>
+	<h3>Here is my code for my loop and array demonstration</h3><br>
+	<p>function timesTable(){<br>
+		//program establishes text variable and base number to multiply<br>
+		//program calculates and loops to 12<br>
+		var text= "";<br>
+		for (var i=1; i<=12; i++){<br>
+		for (var j=1; j<=12; j++){<br>
+		text += j + " x " + i + " = " + j*i + "";<br>
+		<br>
+		//program displays total multiples 1 through 12<br>
+		document.getElementById('timesTableDiv').innerHTML=text;<br>
+		}<br>
+		}<br>
+		}<br>
+		function array(){<br>
+		var text= "";<br>
+		var num= [12];<br>
+		for (var a = 1; a <= num ; a++){<br>
+			for (var b = 1; b <= num; b++){<br>
+		text += a + " x " + b + " = " + a*b + "";<br>
+		<br>
+		//program displays total multiples 1 through 12<br>
+		document.getElementById('arrayDiv').innerHTML=text;<br>
+		}<br>
+		}<br>
+		}<br></p>
 </body>
 </html>
 
