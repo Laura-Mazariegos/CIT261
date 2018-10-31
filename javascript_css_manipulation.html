@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<style>
+	#box {
+		text-align: center;
+		font-size: 50px;
+		color: yellow;
+		width: 400px;
+		height: 400px;
+		position: relative;
+		background: red;
+		border-radius: 10%
+	}
+
+	#animate {
+		width: 50px;
+		height: 50px;
+		position: absolute;
+		background-color: purple;
+		border-radius: 50%;
+
+	}
+
+	#animate1 {
+		width: 50px;
+		height: 50px;
+		position: absolute;
+		background-color: blue;
+		border-radius: 50%;
+
+	}
+
+	#wheel {
+		width: 400px;
+		height: 400px;
+
+	}
+
+</style>
+
+<body>
+
+	<p>
+		<button onclick="yourMove(); myMove()">Click Me First</button>
+		<br><br>
+		<button onclick="rotate(document.getElementById('box'))">Click Me Next</button>
+	</p>
+
+	<div id="box">Watch me animate!
+		<div id="animate"></div>
+		<div id="animate1"></div>
+	</div>
+	<br>
+
+	<p>
+		<button onclick="rotate(document.getElementById('wheel'))">Click to Spin the Wheel</button>
+	</p>
+
+<h2>Wheel Spin!</h2>
+
+	<div><img src="https://orig00.deviantart.net/4351/f/2010/068/3/a/wheel__10k_misplacement_by_gradyz033.gif" id="wheel"></div>
+
+	<script>
+		function yourMove() {
+			var circle = document.getElementById("animate1");
+			var start = 0;
+			var time = setInterval(step, 20);
+
+			function step() {
+				if (start == 340) {
+					clearInterval(time);
+				} else {
+					start++;
+					circle.style.top = start + 'px';
+					circle.style.left = start + 'px';
+				}
+			}
+		}
+
+		function myMove() {
+			var elem = document.getElementById("animate");
+			var pos = 0;
+			var id = setInterval(frame, 5);
+
+			function frame() {
+				if (pos == 340) {
+					clearInterval(id);
+				} else {
+					pos++;
+					elem.style.top = pos + 'px';
+					elem.style.right = pos + 'px';
+				}
+			}
+		}
+
+		function rotate(object) {
+			setInterval(function() {
+				object.style.transform += "rotate(1deg)";
+			}, 4);
+		}
+	</script>
+
+</body>
+
+</html>
