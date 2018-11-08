@@ -1,0 +1,28 @@
+{
+	holidays:{
+		"new_years" : "Tuesday January 1st",
+		"martin_luther" : "Monday January 21st",
+		"presidents" : "Monday February 18th",
+		"memorial" : "Monday May 27th",
+		"independence" : "Thursday July 4th",
+		"labor" : "Monday September 2nd",
+		"columbus" : "Monday October 1st",
+		"veterans" : "Monday November 11th",
+		"thanksgiving" : "Thursday November 28th",
+		"christmas" : "Wednesday December 25th"
+	},
+	months:{
+		"jan": "January",
+		"feb": "February",
+		"march": "March",
+		"april": "April",
+		"may": "May",
+		"june": "June",
+		"july": "July",
+		"aug": "August",
+		"sep": "September",
+		"oct": "October",
+		"nov": "November",
+		"dec": "December"
+	}
+}
