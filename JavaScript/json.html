@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+	<h2>2019 Federal Holiday Calendar: </h2><br>
+	<p><strong><span id='jan'></span></strong><br>
+		<span id='new_years'></span><br>
+		<span id='martin_luther'></span><br><br>
+		<strong><span id='feb'></span></strong><br>
+		<span id='presidents'></span><br><br>
+		<strong><span id='may'></span></strong><br>
+		<span id='memorial'></span><br><br>
+		<strong><span id='july'></span></strong><br>
+		<span id='independence'></span><br><br>
+		<strong><span id='sep'></span></strong><br>
+		<span id='labor'></span><br><br>
+		<strong><span id='oct'></span></strong><br>
+		<span id='columbus'></span><br><br>
+		<strong><span id='nov'></span></strong><br>
+		<span id='veterans'></span><br>
+		<span id='thanksgiving'></span><br><br>
+		<strong><span id='dec'></span></strong><br>
+		<span id='christmas'></span>
+	</p>
+
+
+	<script>
+		var calendarObject = new XMLHttpRequest();
+
+		calendarObject.open('GET', 'https://laura-mazariegos.github.io/CIT261.github.io/holidays.json', true);
+		calendarObject.send();
+		calendarObject.onload = function() {
+			var calendarInfo = JSON.parse(calendarObject.responseText);
+			console.log(calendarInfo);
+			document.getElementById('jan').innerHTML = calendarInfo.jan;
+			document.getElementById('new_years').innerHTML = calendarInfo.new_years;
+			document.getElementById('martin_luther').innerHTML = calendarInfo.martin_luther;
+			document.getElementById('feb').innerHTML = calendarInfo.feb;
+			document.getElementById('presidents').innerHTML = calendarInfo.presidents;
+			document.getElementById('may').innerHTML = calendarInfo.may;
+			document.getElementById('memorial').innerHTML = calendarInfo.memorial;
+			document.getElementById('july').innerHTML = calendarInfo.july;
+			document.getElementById('independence').innerHTML = calendarInfo.independence;
+			document.getElementById('sep').innerHTML = calendarInfo.sep;
+			document.getElementById('labor').innerHTML = calendarInfo.labor;
+			document.getElementById('oct').innerHTML = calendarInfo.oct;
+			document.getElementById('columbus').innerHTML = calendarInfo.columbus;
+			document.getElementById('nov').innerHTML = calendarInfo.nov;
+			document.getElementById('veterans').innerHTML = calendarInfo.veterans;
+			document.getElementById('thanksgiving').innerHTML = calendarInfo.thanksgiving;
+			document.getElementById('dec').innerHTML = calendarInfo.dec;
+			document.getElementById('christmas').innerHTML = calendarInfo.christmas;
+
+		}
+	</script>
+</body>
+
+</html>
