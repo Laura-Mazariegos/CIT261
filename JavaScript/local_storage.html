@@ -7,7 +7,8 @@
 	<h1>Financial Calculator</h1>
 	<h1 id= "fail"></h1>
 
-	<body>
+	<body onload="loadPoem()">
+
 		<font color="burg">Fill in the boxes below to have a customized poem!</font>
 		<br><br>
 		Enter a type of flower:<br> <input type="text" id="flower1">
@@ -22,12 +23,13 @@
 		<br><br>
 		Enter another verb: <br><input type="text" id="verb2">
 		<br><br>
-		<button id="button" onclick="savePoem()">Results</button>
+		<button id="button" onclick="savePoem()">Customize</button>
 		<br><br>
+
 		<strong>Poem:</strong>
 		<h3 id="line"></h3><br>
 
-	</body>
+
 		<script type="text/javaScript">
 
 			function loadPoem(){
@@ -69,10 +71,12 @@
 				localStorage.setItem("word",JSON.stringify(word));
 				document.getElementById("line").innerHTML= word.line;
 			}
+
+
 		</script>
 
 
-
+	</body>
 </head>
 
 </html>
