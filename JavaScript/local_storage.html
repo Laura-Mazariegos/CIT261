@@ -1,0 +1,77 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+
+<head>
+	<meta charset="utf-8">
+	<title> Local_Storage </title>
+	<h1>Financial Calculator</h1>
+	<h1 id= "fail"></h1>
+
+	<body>
+		<font color="burg">Fill in the boxes below to have a customized poem!</font>
+		<br><br>
+		Enter a type of flower:<br> <input type="text" id="flower1">
+		<br><br>
+		Enter another type of flower:<br> <input type="text" id="flower2">
+		<br><br>
+		Enter a color: <br><input type="text" id="color1">
+		<br><br>
+		Enter another color: <br><input type="text" id="color2">
+		<br><br>
+		Enter a verb: <br><input type="text" id="verb1">
+		<br><br>
+		Enter another verb: <br><input type="text" id="verb2">
+		<br><br>
+		<button id="button" onclick="savePoem()">Results</button>
+		<br><br>
+		<strong>Poem:</strong>
+		<p id="line"></p><br>
+
+	</body>
+		<script type="text/javaScript">
+
+			function loadPoem(){
+			if (typeof(Storage) !== "undefined"){
+				var word = JSON.parse(localStorage.getItem("word"));
+				document.getElementById('flower1').value=word.flower1;
+				document.getElementById('flower2').value=word.flower2;
+				document.getElementById('color1').value=word.color1;
+				document.getElementById('color2').value=word.color2;
+				document.getElementById('verb1').value=word.verb1;
+				document.getElementById('verb2').value=word.verb2;
+				document.getElementById('line').innerHTML= word.line;
+			}
+				else{
+					document.getElementById('fail').innerHTML="Browser not supported";
+				}
+
+			}
+
+			function poem(flower1,flower2,color1,color2,verb1,verb2){
+				this.flower1=flower1;
+				this.flower2=flower2;
+				this.color1=color1;
+				this.color2=color2;
+				this.verb1=verb1;
+				this.verb2=verb2;
+				this.line= flower1 + "s are " + color1 + ", "+ flower2+ "s are "+ color2+ ". I " + verb1 + " when I " + verb2+ " you!";
+			}
+			var insert = new poem('flower1','flower2','color1','color2','verb1','verb2');
+
+			function savePoem(){
+				var word = new poem(
+					document.getElementById('flower1').value, document.getElementById('flower2').value,
+					document.getElementById('color1').value, document.getElementById('color2').value,
+					document.getElementById('verb1').value,
+					document.getElementById('verb2').value
+				);
+				localStorage.setItem("word",JSON.stringify(word));
+				document.getElementById("line").innerHTML= word.line;
+			}
+		</script>
+
+
+
+</head>
+
+</html>
