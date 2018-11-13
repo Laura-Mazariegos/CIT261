@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<body  onload="load()" >
+		<style>
+		.box{
+			background-color:blue;
+			color:orange;
+			text-align: center;
+			font-size: 25px;
+			width:120px;
+			height:20px;
+			padding:40px;
+			border-style: outset;
+			border-color: orange;
+			border-radius: 20%;
+			}
+
+		</style>
+
+		<div onmouseover="over(this)" onmouseout="out(this)"
+			 class= "box">
+			Mouse Over Me!</div><br>
+
+		<div onclick="click(this)" ondblclick="dclick(this)"
+			 class= "box">
+			Double Click Me!</div><br>
+
+		<div onmousedown="down(this)" onmouseup="up(this)"
+			 class= "box">
+			Hold Click!</div><br>
+
+		<script>
+			function over(obj) {
+				obj.style.backgroundColor= "purple"
+				obj.innerHTML = "Get Off of Me!"
+			}
+
+			function out(obj) {
+				obj.style.backgroundColor= "blue"
+				obj.innerHTML = "Mouse Over Me!"
+			}
+
+			function click(obj) {
+				obj.style.backgroundColor= "blue"
+				obj.innerHTML = "Double Click Me!"
+			}
+			function dclick(obj) {
+				obj.style.backgroundColor= "purple"
+				obj.innerHTML = "Nice to Meet You!"
+			}
+			function down(obj) {
+				obj.style.backgroundColor= "purple"
+				obj.innerHTML = "Release Me!"
+			}
+
+			function up(obj) {
+				obj.style.backgroundColor= "blue"
+				obj.innerHTML = "Hold Click!"
+			}
+			function load() {
+				alert("Hello! Here are some examples of JavaScript Events")
+			}
+
+
+		</script>
+
+	</body>
+</html>
