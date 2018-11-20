@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<body>
+		<style>
+
+			.box1{
+				background-color:orange;
+				width: 10em;
+				text-align: center;
+				font-size: 20px;
+			}
+			.box2{
+				background-color:greenyellow;
+				width: 10em;
+				text-align: center;
+				font-size: 20px;
+			}
+			.box3{
+				background-color:deepskyblue;
+				width: 10em;
+				text-align: center;
+				font-size: 20px;
+			}
+
+		</style>
+<br>
+
+	<div id="div1" class="box1">
+		<button onclick="before()">Insert Before (click me)</button>
+		<p id="present">Present</p>
+		<p id="p2">Future</p><br>
+
+	</div>
+	<br>
+
+	<div id="div2" class="box2">
+		<button onclick="add()">Append Child (click me)</button>
+		<p id="p1">duck</p>
+		<p id="p2">duck</p><br>
+	</div>
+	<br>
+
+	<div id="div3" class="box3">
+		<button onclick="remove()">Remove Child (click me)</button>
+		<p id="rem">I don't want to go!!!</p>
+		<p id="stay">Say goodbye!</p><br>
+	</div>
+
+	<script>
+		function before() {
+			var lines = document.createElement("p");
+			var past = document.createTextNode("Past");
+			lines.appendChild(past);
+
+			var elem = document.getElementById("div1");
+			var present = document.getElementById("present");
+			elem.insertBefore(lines, present);
+		}
+
+		function add() {
+			var ducks = document.createElement("p");
+			var goose = document.createTextNode("GOOSE!");
+			ducks.appendChild(goose);
+
+			var element = document.getElementById("div2");
+			element.appendChild(ducks);
+		}
+
+		function remove() {
+			var parent = document.getElementById("div3");
+			var del = document.getElementById("rem");
+			del.parentNode.removeChild(del);
+
+		}
+	</script>
+
+</body>
+</html>
+
+
