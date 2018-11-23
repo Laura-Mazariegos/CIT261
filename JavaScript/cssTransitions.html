@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<style>
+		.sun {
+			animation-name: sun;
+			width: 75px;
+			height: 75px;
+			background: yellow;
+			box-shadow: 5px 5px 15px orange inset;
+			border-radius: 50%;
+			transition: width 3s, height 3s;
+			animation-duration: 5s;
+			margin-left: 20%;
+			position: absolute;
+
+		}
+
+
+		.sun:hover {
+			width: 350px;
+			height: 350px;
+			box-shadow: 10px 10px 20px orange;
+			animation-name: sun;
+			animation-iteration-count: infinite;
+
+		}
+
+		.sky {
+			width: 600px;
+			height: 400px;
+			background-color: cornflowerblue;
+
+		}
+		p {
+			font-size: 20px;
+			font-family: sans-serif;
+		}
+
+		@keyframes sun {
+			0% {
+				background-color: yellow;
+			}
+			25% {
+				background-color: gold;
+			}
+			50% {
+				background-color: orange;
+			}
+			75% {
+				background-color: darkorange;
+			}
+			100% {
+				background-color: orangered;
+			}
+		}
+	</style>
+</head>
+
+<body>
+
+	<h1>The transition Property</h1>
+
+	<p>Mouse over the circle to see the transition in action:</p>
+
+	<div class="sky">
+		<div class="sun">
+		</div>
+	</div>
+
+
+
+</body>
+</html>
