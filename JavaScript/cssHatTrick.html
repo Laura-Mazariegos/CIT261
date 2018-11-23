@@ -1,0 +1,189 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<style>
+			body {
+				font-family: Arial, Helvetica, sans-serif;
+				text-align: center;
+				animation-name: body;
+				animation-iteration-count: infinite;
+			}
+
+
+			.red{
+				background-color: red;
+				color: white;
+			}
+
+			.blue{
+				background-color: blue;
+				color: white;
+			}
+
+			.yellow{
+				background-color: yellow;
+				color:grey;
+			}
+
+			.orange{
+				background-color: orange;
+				color: white;
+			}
+
+			.purple{
+				background-color:purple;
+				color: white;
+			}
+
+			.green{
+				background-color: green;
+				color: white;
+			}
+
+			.flip-card {
+				background-color: transparent;
+				width: 200px;
+				height: 100px;
+				perspective: 1000px;
+				padding-top: 50px;
+				margin-left: 5em;
+				display: inline-block;
+				transition: width 3s, height 3s;
+
+
+			}
+			.flip-card-inner {
+				position:inherit;
+				width: 100%;
+				height: 100%;
+				text-align: center;
+				transition: transform .5s;
+				transform-style: preserve-3d;
+				box-shadow:5px 5px 20px;
+			}
+
+			.flip-card:hover .flip-card-inner {
+				transform: rotatey(180deg);
+				width: 125%;
+				height: 125%;
+
+
+			}
+
+			.flip-card-front, .flip-card-back {
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				backface-visibility: hidden;
+
+
+			}
+
+			.flip-card-front {
+				background-color: black;
+				color: white;
+				z-index: 2;
+				box-shadow:5px 5px 20px;
+
+			}
+
+			.flip-card-back {
+				transform: rotateY(180deg);
+				width: 100%;
+				height: 100%;
+				z-index: 1;
+			}
+			@keyframes body {
+				0% {
+					background-color: lightblue;
+				}
+				25% {
+					background-color: skyblue;
+				}
+				50% {
+					background-color: dodgerblue;
+				}
+				75% {
+					background-color:skyblue;
+				}
+				100% {
+					background-color:lightblue;
+				}
+
+
+			}
+		</style>
+	</head>
+	<body>
+
+		<h1>Card Flip with Text</h1>
+		<h3>Hover over the cards to learn colors in spanish:</h3>
+
+		<div class="flip-card">
+			<div class="flip-card-inner">
+				<div class="flip-card-front">
+					<h1>ROJO</h1>
+				</div>
+				<div class="flip-card-back red">
+					<h1>RED</h1>
+
+				</div>
+			</div>
+		</div>
+		<div class="flip-card">
+			<div class="flip-card-inner">
+				<div class="flip-card-front">
+					<h1>AZUL</h1>
+				</div>
+				<div class="flip-card-back blue" >
+					<h1 >BLUE</h1>
+
+				</div>
+			</div>
+		</div>
+		<div class="flip-card">
+			<div class="flip-card-inner">
+				<div class="flip-card-front">
+					<h1>AMARILLO</h1>
+				</div>
+				<div class="flip-card-back yellow" >
+					<h1 >YELLOW</h1>
+
+				</div>
+			</div>
+		</div>
+		<div class="flip-card">
+			<div class="flip-card-inner">
+				<div class="flip-card-front">
+					<h1>NARANJA</h1>
+				</div>
+				<div class="flip-card-back orange" >
+					<h1 >ORANGE</h1>
+				</div>
+			</div>
+		</div>
+		<div class="flip-card">
+			<div class="flip-card-inner">
+				<div class="flip-card-front">
+					<h1>MORADO</h1>
+				</div>
+				<div class="flip-card-back purple" >
+					<h1 >PURPLE</h1>
+				</div>
+			</div>
+		</div>
+		<div class="flip-card">
+			<div class="flip-card-inner">
+				<div class="flip-card-front">
+					<h1>VERDE</h1>
+				</div>
+				<div class="flip-card-back green" >
+					<h1 >GREEN</h1>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
+
