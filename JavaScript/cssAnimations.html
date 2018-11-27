@@ -1,68 +1,45 @@
 <!DOCTYPE html>
 <html>
-	<body>
+	<body class="water">
 
 		<style>
 			.info{
+
 				font-size: 30px;
 				text-align: center;
 				background-color: slategrey;
 				border-radius: 30%;
 			}
-			.star{
+			.water{
+				width:100%;
+				height:100%;
+				opacity: .5;
+				background-size: contain;
+				background:url('droplets.jpg');
+				animation: waterfall 5s linear infinite;
+				z-index:1;
 
 			}
-			.star:before {
-				background-color:transparent;
-				animation-name: star;
-				animation-duration: 5s;
-				animation-timing-function: linear;
-				animation-delay: -2s;
-				animation-iteration-count: infinite;
-				animation-direction: alternate;
+			.water1{
+				width:100%;
+				height:100%;
 				position: absolute;
-				display: block;
-				content: '';
-				width: 0;
-				height: 0;
-				top:180px;
-				left:100px;
-				border-left: solid 100px transparent;
-				border-right: solid 100px transparent;
-				border-bottom: solid 70px;
-				transform:rotateZ(-70deg);
+				background:url('droplets.jpg');
+				animation: waterfall 5s linear infinite;
+				z-index: -1;
+
 			}
-			.star:after{
-				background-color: transparent;
-				animation-name: star;
-				animation-duration: 5s;
-				animation-timing-function: linear;
-				animation-delay: -2s;
-				animation-iteration-count: infinite;
-				animation-direction: alternate;
-				position:absolute;
-				display: block;
-				content: '';
-				width: 0;
-				height: 0;
-				top:180px;
-				left:100px;
-				border-left: solid 100px transparent;
-				border-right: solid 100px transparent;
-				border-bottom: solid 70px;
-				transform:rotateZ(71deg);
-			}
-			@keyframes star {
-				0%   {color:yellow; left:0px; top:0px;}
-				25%  {color:gold; left:0px; top:300px;}
-				50%  {color:orange; left:0px; top:0px;}
-				75%  {color:orangered; left:300px; top:300px;}
-				100% {color:red; left:300px; top:0px;}
+
+			@keyframes waterfall {
+				0%   {background-position:0,0 }
 			}
 
 		</style>
 		<br><br><br><br>
-		<div class="star"></div>
-		<p class="info"><font color="red">This </font><font color="orangered">is </font> <font color="orange">a </font><font color="gold">demonstration </font><font color="yellow">of Animation</font></p>
+		<header>
+		<h1 class="info"><font color="red">This </font><font color="orangered">is </font> <font color="orange">a </font><font color="gold">demonstration </font><font color="yellow">of Animation</font></h1>
+		</header>
+		<div class="water1"></div>
+
 	</body>
 </html>
