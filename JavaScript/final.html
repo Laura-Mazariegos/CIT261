@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html>
+	<header class="header">
+		<h1 class="h1">Mallory Ink</h1>
+	</header>
+	<body onload="loadForm()" class="body">
+		<style>
+			.body{
+				background-color: navy;
+			}
+
+			.h1{
+				text-align: center;
+				text-shadow: 10px 10px 15px darkslategray;
+				font-size: 10em;
+				font-family:serif;
+				font-style: italic;
+				box-shadow: 10px 10px 15px gold;
+			}
+			.h2{
+				text-align: center;
+				text-shadow: 5px 5px 10px ivory;
+				 font-size: 5em;
+				font-family:serif;
+				font-style: italic;
+
+			}
+			.header{
+				height:auto;
+				opacity: 50%;
+				background-size: contain;
+				background:url('calligraphy.jpg');
+				animation: writing 35s linear infinite;
+			}
+
+			.wedding{
+				background:url('wedding.jpg');
+				background-size:cover;
+			}
+
+			.birthday{
+				background:url('birthday.jpg');
+				background-size:cover;
+			}
+
+			.announcement{
+				background:url('baby.jpg');
+				background-size:cover;
+			}
+
+			.anniversary{
+				background:url('anniversary.jpg');
+				background-size:cover;
+			}
+
+			.party{
+				background:url('party.jpg');
+				background-size:cover;
+			}
+
+			.advertise{
+				background:url('advertise.jpg');
+				background-size:cover;
+			}
+
+			.p{
+				color: whitesmoke;
+				text-shadow: 3px 3px 5px black;
+				opacity: .7;
+				background-color: black;
+				border-radius: 20%;
+				font-family:serif;
+				font-style: italic;
+				font-size: 20px;
+				position: relative;
+				top: 10%;
+				text-align: center;
+			}
+
+			.red{
+				background:url('wed_info.jpg');
+				background-size: cover;
+
+			}
+
+			.blue{
+				background:url('balloons.jpg');
+				background-size: cover;
+			}
+
+			.yellow{
+				background:url('baby_inv.jpg');
+				background-size: cover;
+			}
+
+			.orange{
+				background:url('ann_inv.jpg');
+				background-size: cover;
+			}
+
+			.purple{
+				background:url('party_inv1.jpg');
+				background-size: cover;
+			}
+
+			.green{
+				background:url('ad_inv.jpg');
+				background-size: cover;
+			}
+
+			.flip-card {
+				background-color: transparent;
+				width: 300px;
+				height: 150px;
+				perspective: 1000px;
+				padding-top: 50px;
+				margin-left: 7em ;
+				margin-top: 5em ;
+				display: inline-block;
+			}
+
+			.flip-card-inner {
+				position:inherit;
+				width: 100%;
+				height: 100%;
+				text-align: center;
+				transition: transform .5s;
+				transform-style: preserve-3d;
+				box-shadow:5px 5px 20px;
+			}
+
+			.flip-card:hover .flip-card-inner {
+				transform: rotatey(180deg);
+				transition: width 0.1s, height 0.5s;
+				animation-duration: 10s;
+				width: 120%;
+				height: 150%;
+				box-shadow: 10px 10px 15px gold;
+			}
+
+			.flip-card-front, .flip-card-back {
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				backface-visibility: hidden;
+			}
+
+			.flip-card-front {
+				color: white;
+				text-shadow: 5px 5px 10px black;
+				z-index: 2;
+				box-shadow:5px 5px 20px gold;
+
+			}
+
+			.flip-card-back {
+				transform: rotateY(180deg);
+				width: 100%;
+				height: 100%;
+				z-index: 1;
+
+			}
+			.box{
+
+				margin: auto;
+				margin-top: 8em;
+				text-align:center;
+				position: relative;
+				top: 50%;
+				padding-top:100px;
+				width: 30em;
+				height: 10em;
+				background: url(info.jpg);
+				background-size:cover;
+				color: black;
+				text-shadow: 3px 3px 5px grey;
+				border-radius: 20%;
+				font-family:serif;
+				font-style: italic;
+				box-shadow: 10px 10px 15px gold;
+				font-size:18px;
+			}
+
+			.form {
+				margin: auto;
+				margin-top: 8em;
+				margin-bottom: 8em;
+				text-align:center;
+				position: relative;
+
+			}
+
+			.fieldset label {
+				background-color: darkgrey;
+				border-radius: 2em;
+				margin: 10px 0;
+				border: darkorange solid;
+				box-shadow: 5px 5px 15px gold;
+				width: 50%;
+				padding: 12px 20px;
+				display: inline-block;
+				box-sizing: border-box;
+			}
+
+			.footer{
+				background-color: gold;
+				text-align: center;
+				font-family: sans-serif;
+				width: 50%;
+				margin: auto;
+				box-shadow: 10px 10px 15px;
+				border-radius: 10em;
+				position: relative;
+			}
+
+			@keyframes writing {
+				0%   {background-position:0,0 }
+				100% {background-position: -2277px,0}
+			}
+
+		</style>
+
+<h2 class="h2">Our Services</h2>
+		<div class="flip-card">
+			<div class="flip-card-inner">
+				<div class="flip-card-front wedding">
+					<h1>Weddings</h1>
+				</div>
+				<div class="flip-card-back red">
+					<span id= 'weddings' class="p"></span>
+
+				</div>
+			</div>
+		</div>
+		<div class="flip-card">
+			<div class="flip-card-inner">
+				<div class="flip-card-front birthday">
+					<h1>Birthdays</h1>
+				</div>
+				<div class="flip-card-back blue" >
+					<span id= 'birthdays' class="p"></span>
+
+				</div>
+			</div>
+		</div>
+		<div class="flip-card">
+			<div class="flip-card-inner">
+				<div class="flip-card-front announcement">
+					<h1>Announcements</h1>
+				</div>
+				<div class="flip-card-back yellow" >
+					<span id= 'announcements' class="p"></span>
+
+				</div>
+			</div>
+		</div>
+		<div class="flip-card">
+			<div class="flip-card-inner">
+				<div class="flip-card-front anniversary">
+					<h1>Anniversaries</h1>
+				</div>
+				<div class="flip-card-back orange" >
+					<span id= 'anniversaries' class="p"></span>
+				</div>
+			</div>
+		</div>
+		<div class="flip-card">
+			<div class="flip-card-inner">
+				<div class="flip-card-front party">
+					<h1>Graduations</h1>
+				</div>
+				<div class="flip-card-back purple" >
+					<span id= 'graduations' class="p"></span>
+				</div>
+			</div>
+		</div>
+		<div class="flip-card">
+			<div class="flip-card-inner">
+				<div class="flip-card-front advertise">
+					<h1>Calligraphy</h1>
+				</div>
+				<div class="flip-card-back green" >
+					<span id= 'calligraphy' class="p"></span>
+				</div>
+			</div>
+		</div>
+		<div onmouseover="over(this)" onmouseout="out(this)"
+				  class= "box " >
+			About Us</div>
+		<div class="form">
+			<form action="thanks.php" method="post" enctype="multipart/form-data" name="storm" id="weatherform">
+				<fieldset class="fieldset">
+					<legend><span class="h2">Contact Information</span></legend><br>
+					<label><span>Full name:</span><br>
+						<input id="name" name="fullname" type="text" value="" placeholder="Full Name" pattern="[A-Za-z ]{5,30}" required></label><br>
+					<label><span>E-mail: </span><br>
+						<input id="email" name="email" type="email" value="" placeholder="sample@email.com"></label><br>
+					<label><span>Phone Number:</span><br>
+						<input id="phone" name="phone" type="tel" value="" placeholder="555-555-5555" pattern="[0-9 -]{10,20}" required></label><br>
+					<label><span>Brief description of design:</span><br> <textarea id="comment" name="comments" ></textarea></label><br>
+					<input type="button" onclick="saveForm()" value="Submit">
+					<input type="reset" value="Reset">
+
+				</fieldset>
+			</form>
+		</div>
+		<script>
+			var infoObject = new XMLHttpRequest();
+
+			infoObject.open('GET', 'https://laura-mazariegos.github.io/CIT261.github.io/JavaScript/final_info.json', true);
+			infoObject.send();
+			infoObject.onload = function() {
+				var objectInfo = JSON.parse(infoObject.responseText);
+				console.log(objectInfo);
+				document.getElementById('weddings').innerHTML = objectInfo.weddings;
+				document.getElementById('birthdays').innerHTML = objectInfo.birthdays;
+				document.getElementById('announcements').innerHTML = objectInfo.announcements;
+				document.getElementById('anniversaries').innerHTML = objectInfo.anniversaries;
+				document.getElementById('graduations').innerHTML = objectInfo.graduations;
+				document.getElementById('calligraphy').innerHTML = objectInfo.calligraphy;
+				document.getElementById('about_us').innerHTML = objectInfo.about_us;
+			}
+			function over(obj) {
+				document.getElementById('about_us').innerHTML = obj.innerHTML="Mallory Ink is a local, Des moines based, stationary and printing business. We have the capabilities of customizing different projects to suit your creative and unique needs. ";
+
+			}
+
+			function out(obj) {
+				obj.innerHTML = "About Us"
+			}
+
+			function loadForm(){
+				if (typeof(Storage) !== "undefined"){
+					var input = JSON.parse(localStorage.getItem("input"));
+					document.getElementById('name').value=input.name;
+					document.getElementById('email').value=input.email;
+					document.getElementById('phone').value=input.phone;
+					document.getElementById('comment').value=input.comment;
+
+				}
+				else{
+					document.getElementById('fail').innerHTML="Browser not supported";
+				}
+
+			}
+
+			function form(name, email, phone, comment){
+				this.name=name;
+				this.email=email;
+				this.phone=phone;
+				this.comment=comment;
+
+			}
+
+
+			function saveForm(){
+				var input = new form(
+					document.getElementById('name').value, document.getElementById('email').value,
+					document.getElementById('phone').value, document.getElementById('comment').value,
+				);
+
+				localStorage.setItem("input",JSON.stringify(input));
+
+			}
+		</script>
+		<footer class="footer"><h2>~~Mallory Ink~~<br>Des Moines, Iowa 50313<br>515-639-5019</h2></footer>
+	</body>
+</html>
