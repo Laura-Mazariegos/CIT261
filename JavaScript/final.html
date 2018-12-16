@@ -213,6 +213,13 @@
 				position: relative;
 			}
 
+			.map{
+				height: 400px;
+				width: 400px;
+				margin: auto;
+				margin-bottom: 3em;
+			}
+
 			@keyframes writing {
 				0%   {background-position:0,0 }
 				100% {background-position: -2277px,0}
@@ -304,6 +311,7 @@
 				</fieldset>
 			</form>
 		</div>
+		<div id="map" class="map"></div>
 		<script>
 			var infoObject = new XMLHttpRequest();
 
@@ -362,7 +370,18 @@
 				localStorage.setItem("input",JSON.stringify(input));
 
 			}
+
+			var map;
+			function initMap() {
+				map = new google.maps.Map(document.getElementById('map'), {
+					center: {lat:41.683311, lng: -93.629476},
+					zoom: 15
+				});
+			}
 		</script>
+			<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAHneHIK5KI9e5PFLFkHoJUX_xBQrUzhmY&callback=initMap"
+			async defer></script>
+
 		<footer class="footer"><h2>~~Mallory Ink~~<br>Des Moines, Iowa 50313<br>515-639-5019</h2></footer>
 	</body>
 </html>
